@@ -23,7 +23,7 @@ sudo apt install openjdk-8-jdk
 mkdir -p ~/bin
 ```
 
-Here we prepare our working directory which will be at ~/android/lineage (~ is an alias for your home directory)
+Here we prepare our working directory which will be at ~/android/lineage
 you can change this, but make sure to account for this change with respect to the instructions from this guide
 
 ```bash
