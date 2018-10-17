@@ -39,9 +39,15 @@ and have the time, internet speed and storage to handle this.
 However if your goal is just to be able to build lineage 14.1 from source for the gtexslte this is all you need
 
 ```bash
+cd ~/android/lineage
 repo init -u https://github.com/jedld/android.git -b cm-14.1 --depth=1
 repo sync -c
 ```
+
+repo sync will take a while, more like several hours depending on you internet speed. After it is finished you should
+be able to see the android project files in the current folder. If there are connection issues or failures you always
+execute repo sync again
+
 
 ## Start Build
 
