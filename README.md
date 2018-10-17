@@ -302,3 +302,7 @@ gzip -c LINEAGE-OMS-14.1-$BUILD-UNOFFICIAL-SMT285-ALPHA.tar.md5 > LINEAGE-OMS-14
 ```
 
 This will create a zip file that you can share on xda for example.
+
+### Contribution
+
+If you would like to contribute to this guide or report any issues, simple do a pull request
