@@ -1,7 +1,5 @@
 #!/bin/sh
 
-arg1="$1"
-shift 1
-
-docker build . -t gtexslte-build
-docker run -v work:/home/android/lineage -w /home/android/lineage -it gtexslte-build /bin/bash
+docker build . -t gtexslte-builder
+mkdir -p $(pwd)/work
+docker run -v $(pwd)/work:/home/android/lineage -w /home/android/lineage -it gtexslte-builder /bin/bash

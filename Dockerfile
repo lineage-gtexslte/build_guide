@@ -5,4 +5,5 @@ RUN mkdir -p /home/android/bin
 RUN curl https://storage.googleapis.com/git-repo-downloads/repo > /home/android/bin/repo && chmod a+x /home/android/bin/repo
 RUN mkdir -p /home/android/lineage
 ENV PATH $PATH:/home/android/bin:/home/android/lineage/out/host/linux-x86/bin
-RUN cd /home/android/lineage && repo init -u https://github.com/jedld/android.git -b cm-14.1 --depth=1
+RUN cd /home/android/lineage
+ENV SHELL /bin/bash
