@@ -1,6 +1,8 @@
 
 # LineageOS 14.1 build guide for the Samsung Galaxy Tab A 7.0 LTE 2016 (SM-T285)
 
+[![Join the chat at https://gitter.im/build_guide/community](https://badges.gitter.im/build_guide/community.svg)](https://gitter.im/build_guide/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This is a build guide specifically for the Samsung Galaxy Tab A 7.0 LTE 2016 (SM-T285) also known internally and for this guide as the gtexslte
 Note that the build is not compatible with the wifi only version also known as the gtexswifi or the (SM-T280)
 
