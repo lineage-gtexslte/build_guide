@@ -9,5 +9,6 @@ ENV PATH $PATH:/home/android/bin:/home/android/lineage/out/host/linux-x86/bin
 RUN cd /home/android/lineage
 RUN git config --global user.email "you@example.com&quot"
 RUN git config --global user.name "Android Build User"
-RUN ln -s /usr/bin/python3.8 /usr/bin/python
+COPY python_switch.sh /home/android/bin/python_switch
+RUN chmod a+x /home/android/bin/python_switch && python_switch 3
 ENV SHELL /bin/bash
