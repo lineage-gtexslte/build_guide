@@ -9,19 +9,19 @@ ENV PATH $PATH:/home/android/bin:/home/android/lineage/out/host/linux-x86/bin
 RUN cd /home/android/lineage
 RUN git config --global user.email "you@example.com&quot"
 RUN git config --global user.name "Android Build User"
-COPY python_switch.sh /home/android/bin/python_switch
+COPY scripts/python_switch.sh /home/android/bin/python_switch
 RUN chmod a+x /home/android/bin/python_switch && python_switch 3
 COPY java_security_patch.py /home/android/bin/java_security_patch
 RUN chmod a+x /home/android/bin/java_security_patch && java_security_patch
-COPY repo_init.sh /home/android/bin/repo_init
+COPY scripts/repo_init.sh /home/android/bin/repo_init
 RUN chmod a+x /home/android/bin/repo_init
-COPY repo_sync.sh /home/android/bin/repo_sync
+COPY scripts/repo_sync.sh /home/android/bin/repo_sync
 RUN chmod a+x /home/android/bin/repo_sync
-COPY build_kernel.sh /home/android/bin/build_kernel
+COPY scripts/build_kernel.sh /home/android/bin/build_kernel
 RUN chmod a+x /home/android/bin/build_kernel
-COPY create_boot_image.sh /home/android/bin/create_boot_image
+COPY scripts/create_boot_image.sh /home/android/bin/create_boot_image
 RUN chmod a+x /home/android/bin/create_boot_image
-COPY create_flashable_zip.sh /home/android/bin/create_flashable_zip
+COPY scripts/create_flashable_zip.sh /home/android/bin/create_flashable_zip
 RUN chmod a+x /home/android/bin/create_flashable_zip
 ENV USER android
 ENV LC_ALL C
