@@ -15,6 +15,8 @@ COPY java_security_patch.py /home/android/bin/java_security_patch
 RUN chmod a+x /home/android/bin/java_security_patch && java_security_patch
 COPY repo_init.sh /home/android/bin/repo_init
 RUN chmod a+x /home/android/bin/repo_init
+COPY repo_sync.sh /home/android/bin/repo_sync
+RUN chmod a+x /home/android/bin/repo_sync
 ENV USER android
 ENV LC_ALL C
 ENV SHELL /bin/bash
