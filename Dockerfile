@@ -13,6 +13,8 @@ COPY python_switch.sh /home/android/bin/python_switch
 RUN chmod a+x /home/android/bin/python_switch && python_switch 3
 COPY java_security_patch.py /home/android/bin/java_security_patch
 RUN chmod a+x /home/android/bin/java_security_patch && java_security_patch
+COPY repo_init.sh /home/android/bin/repo_init
+RUN chmod a+x /home/android/bin/repo_init
 ENV USER android
 ENV LC_ALL C
 ENV SHELL /bin/bash
