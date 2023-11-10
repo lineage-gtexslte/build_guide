@@ -21,6 +21,8 @@ COPY build_kernel.sh /home/android/bin/build_kernel
 RUN chmod a+x /home/android/bin/build_kernel
 COPY create_boot_image.sh /home/android/bin/create_boot_image
 RUN chmod a+x /home/android/bin/create_boot_image
+COPY create_flashable_zip.sh /home/android/bin/create_flashable_zip
+RUN chmod a+x /home/android/bin/create_flashable_zip
 ENV USER android
 ENV LC_ALL C
 ENV SHELL /bin/bash
