@@ -17,6 +17,8 @@ COPY repo_init.sh /home/android/bin/repo_init
 RUN chmod a+x /home/android/bin/repo_init
 COPY repo_sync.sh /home/android/bin/repo_sync
 RUN chmod a+x /home/android/bin/repo_sync
+COPY build_kernel.sh /home/android/bin/build_kernel
+RUN chmod a+x /home/android/bin/build_kernel
 ENV USER android
 ENV LC_ALL C
 ENV SHELL /bin/bash
