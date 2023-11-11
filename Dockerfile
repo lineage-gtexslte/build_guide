@@ -23,6 +23,10 @@ COPY scripts/create_boot_image.sh /home/android/bin/create_boot_image
 RUN chmod a+x /home/android/bin/create_boot_image
 COPY scripts/create_flashable_zip.sh /home/android/bin/create_flashable_zip
 RUN chmod a+x /home/android/bin/create_flashable_zip
+COPY scripts/just_do_it_1.sh /home/android/bin/just_do_it_1
+RUN chmod a+x /home/android/bin/just_do_it_1
+COPY scripts/just_do_it_2.sh /home/android/bin/just_do_it_2
+RUN chmod a+x /home/android/bin/just_do_it_2
 ENV USER android
 ENV LC_ALL C
 ENV SHELL /bin/bash
