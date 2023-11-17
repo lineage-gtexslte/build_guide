@@ -17,7 +17,8 @@ however this guide will not cover that.
 On the hardware front you do need a lot of disk space, when I mean a lot, I mean 100GB+, you will need to be storing the sources as well
 as the compiled binaries and intermediate code. You may also need to store the ROM image which takes at least a gigabyte each
 
-There is also a Docker based build guide in the Misc Section below. Using Docker allows everyone to have a consitent build environment which would make support and debugging easier, aslo it allows for consistent builds even amoung different operating systems. If you are having issues with the main build, I suggest you try the Docker build
+We also have [instructions](README_DOCKER.md) on how to build firmware using Docker. Using Docker allows everyone to have a consitent build environment which would make support and debugging easier, aslo it allows for consistent builds even amoung different operating systems. 
+As of November 2023, this instruction is the most complete and up-to-date.
 
 ## Update Ubuntu
 
@@ -288,60 +289,6 @@ adb sync system
 ```
 
 All modified files will be copied directly to your device system partition. Changes should take effect once you reboot your device.
-
-## Setup using Docker
-
-First depending on your operating system you need to setup docker. For now this guide focuses on Docker on ubuntu
-
-For ubuntu
-
-```bash
-sudo apt-get install \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    software-properties-common
-
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-
-sudo add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
-
-sudo apt-get update
-
-sudo apt-get install docker-ce
-```
-
-Go to your working directory and clone this project
-
-```bash
-git clone https://github.com/lineage-gtexslte/build_guide.git
-```
-
-Build the docker image
-
-```bash
-cd build_guide
-sudo docker build -t gtexslte-builder .
-```
-
-Run the convenience script to log into the docker build shell
-
-```bash
-./docker_build_run.sh
-```
-
-You should see the command prompt. No you can setup the repo:
-
-```bash
-root@d83519d06253:/home/android/lineage# repo init -u https://github.com/jedld/android.git -b cm-14.1 --depth=1
-root@d83519d06253:/home/android/lineage# repo sync -c
-```
-
-Note that "work" folder will be created and where all your build files will be placed.
-
 
 ### MISC: Creating an Odin flashable zip
 

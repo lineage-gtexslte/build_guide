@@ -1,0 +1,1 @@
+python_switch 3 && repo init -u https://github.com/jedld/android.git -b cm-14.1 --depth=1
